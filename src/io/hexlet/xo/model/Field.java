@@ -1,6 +1,7 @@
 package io.hexlet.xo.model;
 
 import java.awt.*;
+import io.hexlet.xo.model.exception.*;
 
 public class Field {
     private static final int FIELD_SIZE=3;
@@ -12,7 +13,7 @@ public class Field {
         return FIELD_SIZE;
     }
 
-    public Figure getFigure(final Point point){
+    public Figure getFigure(final Point point) throws InvalidPointException{
         return field[point.x][point.y];
     }
 
@@ -21,6 +22,8 @@ public class Field {
     }
 
     public boolean checkPoint(Point point){
+
+
         return checkCoordinate(point.x) && checkCoordinate(point.y);
 
     }
