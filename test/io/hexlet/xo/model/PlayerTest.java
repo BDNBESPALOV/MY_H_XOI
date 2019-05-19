@@ -2,6 +2,7 @@ package io.hexlet.xo.model;
 
 import org.junit.Test;
 
+import static groovy.util.GroovyTestCase.assertEquals;
 import static org.junit.Assert.*;
 
 public class PlayerTest {
