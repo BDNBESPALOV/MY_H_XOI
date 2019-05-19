@@ -25,7 +25,7 @@ public class FieldTest {
             field.setFigure(point,inputFigure);
             final Figure actualFigure=field.getFigure(point);
             assertEquals(inputFigure,actualFigure);
-        }catch (PointAlreadyOccupiedException e){}
+        }
         catch (InvalidPointException e){}
 
 
