@@ -12,13 +12,13 @@ public class FieldTest {
 
     @Test
     public void testGetSize() {
-        final Field field=new Field();
+        final Field field=new Field(3);
         assertEquals(3,field.getSize());
     }
 
     @Test
     public void testSetFigure() {
-        final Field field=new Field();
+        final Field field=new Field(3);
         final Point point=new Point(1,1);
         final Figure inputFigure= Figure.X;
         try{
@@ -33,7 +33,7 @@ public class FieldTest {
     }
     @Test
     public void testGetFigureIsNotSet() {
-        final Field field=new Field();
+        final Field field=new Field(3);
         final Point point=new Point(1,1);
 
         try{
@@ -45,7 +45,7 @@ public class FieldTest {
     }
     @Test
     public void testGetFigureXThenZero() {
-        final Field field=new Field();
+        final Field field=new Field(3);
         final Point point=new Point(0,-1);
 
         try{
@@ -59,7 +59,7 @@ public class FieldTest {
     }
     @Test
     public void testGetFigureXThenSize() {
-        final Field field=new Field();
+        final Field field=new Field(3);
         final Point point=new Point(field.getSize()+1,0);
 
         try{
@@ -71,7 +71,7 @@ public class FieldTest {
         }
     }
     public void testGetFigureYThenSize() {
-        final Field field=new Field();
+        final Field field=new Field(3);
         final Point point=new Point(0,-1);
 
         try{
