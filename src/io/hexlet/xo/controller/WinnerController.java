@@ -58,20 +58,19 @@ return new Point(p.x+1,p.y);
 
     public boolean check(Field field,Point currentyPoint,IPointChqanger pointChqanger){
 
-final Figure currenty;
+final Figure currentyFigure;
 final Figure nextFigure;
 final Point nextPoint=pointChqanger.next(currentyPoint);
 
-        final Point p1=start;
-        final Point p2=pointChqanger.next(p1);
-        final Point p3=pointChqanger.next(p2);
-     try{
 
+     try{
+      currentyFigure=field.getFigure(currentyPoint);
+      nextFigure=field.getFigure(nextPoint);
 
 
          }
 
-     } catch(InvalidPointException e){}
+      catch(InvalidPointException e){}
 
         return false;
     }
