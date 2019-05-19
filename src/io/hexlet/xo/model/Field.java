@@ -4,10 +4,14 @@ import java.awt.*;
 import io.hexlet.xo.model.exception.*;
 
 public class Field {
-    private static final int FIELD_SIZE=3;
-    private static final int MIN_COORDINATE=0;
-    private static final int MAX_COORDINATE=FIELD_SIZE;
-    private final Figure[][] field=new Figure[FIELD_SIZE][FIELD_SIZE];
+    private final int FIELD_SIZE;
+    private  int MIN_COORDINATE=0;
+
+    private final Figure[][] field;
+    public Field(int i){
+        FIELD_SIZE=i;
+        field=new Figure[FIELD_SIZE][FIELD_SIZE];
+    }
 
     public int getSize(){
         return FIELD_SIZE;
@@ -34,11 +38,11 @@ public class Field {
     public boolean checkPoint(Point point){
 
 
-        return checkCoordinate(point.x) && checkCoordinate(point.y);
+        return checkCoordinate(point.x,field.length) && checkCoordinate(point.y,field.length);
 
     }
-    public boolean checkCoordinate(int coordinate){
-        return coordinate>=MIN_COORDINATE && coordinate<MAX_COORDINATE;
+    public boolean checkCoordinate(int coordinate, final int maxCoordinate){
+     return    coordinate >= MIN_COORDINATE && coordinate < maxCoordinate;
     }
 
 }
