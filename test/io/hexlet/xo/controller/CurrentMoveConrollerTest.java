@@ -13,7 +13,7 @@ public class CurrentMoveConrollerTest {
 
     @Test
     public void testMoveController() throws InvalidPointException {
-        CurrentMoveConroller currentMoveConroller =new CurrentMoveConroller();
+        CurrentMoveController currentMoveConroller =new CurrentMoveController();
         Field field=new Field(3);
         field.setFigure(new Point(0,0), Figure.X);
         field.setFigure(new Point(0,1), Figure.O);
